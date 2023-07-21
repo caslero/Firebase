@@ -24,6 +24,10 @@ registrarUsuario.addEventListener('submit', (e) => {
 
     guardarUsuario(nombre, correo, clave);
 
+    setTimeout(() => {
+        location = 'login.html'
+      }, "1000");
+      
     //location = 'login.html'
 });
 
