@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body>
+
+    <h1 class="text-center mt-4 mb-10 text-black text-3xl">Mi Primera Lista De Tareas Con Firebase..</h1>
+    <div class="container mx-auto lg:px-28 flex">
+        <section class="flex flex-col border-2 border-red-500 w-[40%]">
+            <article class="flex mb-10">  
+                <div id="semana" class="capitalize">Semana</div>              
+                <div id="dia">Dia</div>
+                <div id="mes" class="mx-4">Mes</div>
+                <div id="year" class="mx-4">Año</div>
+            </article>
+
+            <div>
+                <h5 id="usuarioAct"></h5>
+                <span id="grretings"></span> , <span id="userName"></span>
+            </div>
+
+            <div>
+                <button class="border-2 border-pink-500 bg-yellow-300 w-32 h-10 rounded-[20px]"  id="salirSistema">Salir Del Sistema</button>
+            </div>
+        </section>
+
+        <section class="border-2 border-red-500 w-[60%]">
+           <!-- Aqui vamos a colocar todo el contenido de lista de tareas -->
+           <div id="contenidoTotal">
+
+           </div>
+
+           <!-- Aqui va todo el formulario -->
+           <div>
+            <section class="container mx-auto lg:px-28 px-4 lg:max-w-[800px]">
+                <div class="todo mb-4">
+                    <div class="todo__header">
+                        <h1 class="font-semibold text-4xl text-center text-[#7DDCF5] my-4 md:mt-10">
+                            Lista de Tareas
+                        </h1>
+                    </div>
+        
+                    <div class="todo__add">
+                        <form id="agregarTarea">
+                            <div class="mb-5 flex flex-col md:flex-row md:justify-between items-center">
+                                <div
+                                    class="md:w-[80%] w-full h-10 flex items-center justify-center bg-white rounded-[15px] border-[1px] border-[#7DDCF5] hover:border-[#939D9D] mb-2">
+                                    <input id="input"
+                                        class="w-[95%] text-center h-8 outline-none capitalize placeholder:text-[#7DDCF5] placeholder:text-center hover:placeholder:text-[#919DA3]"
+                                        type="text" placeholder="Agregar Tarea ..." required />
+                                </div>
+                                <button type="submit"
+                                    class="md:-mt-[10px] md:w-[18%] w-48 h-10 bg-[#919DA3] rounded-[20px] hover:text-[#919DA3] hover:bg-[#7DDCF5] text-[#7DDCF5] font-bold">
+                                    Guardar
+                                </button>
+                            </div>
+                        </form>
+
+                        <div id="mostrarTareas"></div>
+        
+                        <!-- <div id="principal" class="todo__body js-todo-body w-full bg-[#939D9D]">
+                            <li data-id="1" data-status="pending">
+                                <label for="1">
+                                    <input type="checkbox" id="1" value="1" />
+                                    <input type="text" value="Learn how to create menu">
+                                </label>
+                                <div class="actions">
+                                    <button class="js-edit">
+                                        <i class="ri-pencil-fill"></i>
+                                    </button>
+                                    <button class="js-delete">
+                                        <i class="ri-delete-bin-fill"></i>
+                                    </button>
+                                </div>
+                            </li>
+        
+                            <li data-id="2" data-status="completed">
+                                <label for="2">
+                                    <input type="checkbox" id="2" value="2" />
+                                    <input type="text" value="Learn how to create resume">
+                                </label>
+                                <div class="actions">
+                                    <button class="js-edit">
+                                        <i class="ri-pencil-fill"></i>
+                                    </button>
+                                    <button class="js-delete">
+                                        <i class="ri-delete-bin-fill"></i>
+                                    </button>
+                                </div>
+                            </li>
+                        </div> -->
+        
+                        <!-- <div id="contenedorBotones" class="flex flex-col justify-center space-y-2 mt-4">
+                            <div class="flex justify-between space-x-2 md:space-x-4">
+                                <div class="basis-1/3 flex justify-end">
+                                    <button class="hidden borrar-marcados" id="anterior">
+                                        Anterior
+                                    </button>
+                                </div>
+                                <div class="basis-1/3 flex justify-center">
+                                    <div id="numeroDePaginas" class="pie-paginas"></div>
+                                </div>
+                                <div class="basis-1/3 flex justify-start">
+                                    <button class="hidden borrar-marcados" id="siguiente">
+                                        Siguiente
+                                    </button>
+                                </div>
+                            </div>
+                        </div> -->
+        
+                        <div class="todo__footer w-full h-14 bg-[#939D9D] mt-4 flex justify-between items-center space-x-2 md:space-x-4">
+                            <div class="basis-1/3 h-12 flex justify-end items-center">
+                                <span title="Cantidad de tareas existentes"
+                                    class="count js-count font-700 text-start pie-items"></span>
+                            </div>
+                            <div class="basis-1/3 h-12 flex justify-center items-center">
+                                <span
+                                    class="clear js-clear text-[#7DDCF5] font-700 cursor-pointer text-center"></span>
+                            </div>
+                            <div class="basis-1/3 h-12 flex justify-start items-center">
+                                <span onclick="marcado()"
+                                    class="borrador js-borrador text-red-500 font-700 cursor-pointer text-end">
+        
+                                </span>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </section>
+           </div>
+        </section>
+    </div>
+    
+    
+
+
+    <script type="module" src="js/usuarios.js"></script>
+   
+    <SCRIPT LANGUAGE="JavaScript">
+        history.forward();
+    </SCRIPT>
+</body>
+</html>

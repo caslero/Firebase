@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+</head>
+<body>
+
+    <h1 class="text-center mt-4 mb-10 text-black text-3xl">Login</h1>
+    <div class="container mx-auto lg:px-28 flex">
+        <section class="border-2 border-red-500 w-[60%]">
+            <h2>Entrar Al Sistema</h2>
+            <div id="datosErrados"></div>
+            <div>
+                <form action="" autocomplete="off" id="entrarSistema">
+                    <div>
+                        <p>Correo</p>
+                        <input type="text" id="entrarCorreo" placeholder="Correo" required>
+                    </div>
+                    <div>
+                        <p>Clave</p>
+                        <input type="text" id="entrarClave" placeholder="Clave" required minlength="6" title="Minimo 6 Caracteres">
+                    </div>
+
+                    <div class="mt-4">
+                        <button class="border-2 border-pink-500 bg-yellow-300 w-32 h-10 rounded-[20px]" type="submit">Entrar</button>
+                        <button class="border-2 border-pink-500 bg-yellow-300 w-32 h-10 rounded-[20px]" type="reset">Limpiar</button>
+                    </div>
+                    <div class="error" id="entrarError"></div>
+                </form>
+            </div>
+        </section>
+
+        <section class="flex flex-col border-2 border-red-500 w-[40%]">
+            <article class="flex mb-10">
+                <!-- <div id="usuarioActivo">Hola señor: </div> -->
+                <div id="semana" class="capitalize">Semana</div>
+                <div id="dia" class="mx-4">Dia</div>
+                <div id="mes">Mes</div>
+                <div id="year" class="mx-4">Año</div>
+            </article>
+            <div>
+                <a href="index.html" class="text-blue-500">Pagina De Inicio</a>
+            </div>
+        </section>
+    </div>
+    
+   
+
+   
+          <!-- <script type="module" src="js/login.js"></script> -->
+          <script type="module" src="js/login.js"></script>
+          <!-- <script type="module" src="js/usuarios.js"></script> -->
+</body>
+</html>
